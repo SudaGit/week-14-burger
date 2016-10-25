@@ -1,0 +1,73 @@
+
+
+
+<form name = "eatform" class="create-update-form" id = "burger-form" action="/burgers/create" method="POST">
+<h1 class="slidein">Come in, eat da' Burgers</h1>
+<h1 class="slideout">Low Calories</h1>
+
+  <div class="form-group">
+	  
+	  <div class="bmenu">
+	  </div>
+		  <div class="porder">
+			  <h2>Place your Order</h2>
+			    <div class= "bmania">
+					    <label for="burger_name" class="nameofbl">Pick your Burger</label>
+					    <select class="nameofb" name="burger_name">
+					    <option value="Cheesy Burger"> Cheesy Burger</option>
+					    <option value="Beany Burger"> Beany Burger</option>
+					    <option value="Leafy Burger"> Leafy Burger</option>
+					    <option value="Vegan Burger"> Vegan Burger</option>
+					    </select>
+					    <button type="submit" class="burger-button" id="give-burger">Add Burger</button>
+			    </div>
+		  </div>
+  </div>
+  <div class="burger-ready" >
+  <ul id ="orderq"> 
+  <li><img src= "./assets/images/vegan.png" >Hello</img></li>
+  </ul>
+
+  </div>
+  <div class="burger-eaten id="devourq">
+  </div>
+   
+</form>
+<script>
+  $( document ).ready(function() {
+    
+    $( "#burger-form" ).submit(function( event )
+     {
+			  event.preventDefault();
+			  alert("clicked");
+			  console.log(event.data);
+			  console.log("event " , event);
+			  console.log($(".nameofb").val());
+              
+              var oburger = $(".nameofb").val();
+
+			  switch (oburger) {
+
+			  case "Cheesy Burger" :
+                 oburgersrc = "../public/assets/images/cheesy.png";
+			  case "Beany Burger" :
+			     oburgersrc = "../public/assets/images/beany.png";
+			  case "Leafy Burger" :
+			     oburgersrc = "../public/assets/images/leafy.png";
+			  case "Vegan Burger" :
+			     oburgersrc = "../public/assets/images/vegan.png";
+
+			  }
+
+			  console.log(oburgersrc);
+
+			  orderline = "<li><img src="
+			              + '"' + oburgersrc 
+			              + '" >' + "</img></li>";
+			 <!-- $("#orderq").append(orderline); -->
+			 console.log(orderline);
+
+
+	});
+});
+</script>

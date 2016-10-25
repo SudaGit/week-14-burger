@@ -1,0 +1,119 @@
+li {
+  background: #FAEBD7;
+  margin: 5px;
+  padding: 5px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  background: aqua;
+   margin: 55px;
+  padding: 10px;
+  height: 555px;
+
+}
+
+.form-group {
+	position:relative;
+  margin-bottom: 55px;
+  display:block;
+}
+
+.nameofb{
+	margin-left: 1em;
+	width:200px;
+	text-decoration: bold;
+	font-size: 16px
+}
+
+h1,  title
+{
+	text-align: center;
+	color: #CB4335;
+}
+
+h2
+{
+	text-align: center;
+	
+}
+
+.nameofbl{
+	margin-left: 30em;
+	font-family: Arial;
+	font-style: bold;
+}
+
+.porder 
+{
+ display: block;
+ float:left;
+}
+
+div.bmenu {
+	display: block;
+	position: relative;
+	float:left;
+	background:url("../images/burgermenu.png") center;
+  z-index: 3;
+ width:275px;
+ height:400px;
+       }
+
+.burger-button {
+	min-width:100px;
+	max-width:200px;
+	min-height:60px;
+	max-height:100px;
+	/*margin-left: 60em;
+	margin-left: 2em;*/
+	font-family:Arial;
+	background-color:orange;
+	font-size: 16px
+
+}
+
+.slidein {
+
+	position: relative;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left:5%;
+    width:100%
+  }
+  
+  to {
+    margin-right:100%;
+    width:100%;
+  }
+}
+
+.slideout {
+	position: relative;
+  animation-duration: 5s;
+  animation-name: slideout;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slideout {
+  from {
+    margin-right:100%;
+    width:100%;
+  }
+  
+  to {
+  	margin-left:5%;
+    width:100%
+    
+  }
+}
