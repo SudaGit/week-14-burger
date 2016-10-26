@@ -14,10 +14,11 @@ router.post('/', function (req, res) {
 
 router.get('/burgers/create', function (req, res) {
 	burgers.all(function (data) {
-		var hbsObject = { burgers: data };
-		console.log(hbsObject);
-		res.render('index', hbsObject);
-	});
+	 var hbsObject = { burgers: data };
+	console.log(hbsObject);
+		res.render('index', {hbsObject});
+ });
+	
 });
 
 router.post('/burgers/create', function (req, res) {

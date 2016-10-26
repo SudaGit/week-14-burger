@@ -8,11 +8,19 @@ li {
   font-weight: bold;
 }
 
+.devc{
+float:left;
+min-width:100px;
+  max-width:200px;
+  min-height:60px;
+  max-height:100px;
+}
+
 .create-update-form {
   background: aqua;
    margin: 55px;
   padding: 10px;
-  height: 555px;
+  height: 400px;
 
 }
 
@@ -60,9 +68,29 @@ div.bmenu {
 	background:url("../images/burgermenu.png") center;
   z-index: 3;
  width:275px;
- height:400px;
+ height:390px;
        }
+div.burger-ready{
+  display: block;
+  position: relative;
+  float:left;
+  width:400px;
+ height:400px;
+}
 
+.theburger{
+width:100px;
+ height:100px;
+ float:left;
+}
+.bli{
+width:250px;
+ height:100px;
+}
+/*#orderq{
+  width:200px;
+ height:100px;
+}*/
 .burger-button {
 	min-width:100px;
 	max-width:200px;
@@ -78,7 +106,7 @@ div.bmenu {
 
 .slidein {
 
-	position: relative;
+	/*position: relative;*/
   animation-duration: 5s;
   animation-name: slidein;
   animation-iteration-count: infinite;
@@ -98,7 +126,7 @@ div.bmenu {
 }
 
 .slideout {
-	position: relative;
+	/*position: relative;*/
   animation-duration: 5s;
   animation-name: slideout;
   animation-iteration-count: infinite;

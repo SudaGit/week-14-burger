@@ -2,13 +2,14 @@
 
 
 <form name = "eatform" class="create-update-form" id = "burger-form" action="/burgers/create" method="POST">
+<div class="bmenu"></div>
 <h1 class="slidein">Come in, eat da' Burgers</h1>
-<h1 class="slideout">Low Calories</h1>
 
+<h1 class="slideout">Low Calories</h1>
+  
   <div class="form-group">
 	  
-	  <div class="bmenu">
-	  </div>
+	  
 		  <div class="porder">
 			  <h2>Place your Order</h2>
 			    <div class= "bmania">
@@ -22,24 +23,29 @@
 					    <button type="submit" class="burger-button" id="give-burger">Add Burger</button>
 			    </div>
 		  </div>
-  </div>
+   
+</form>
+</div>
   <div class="burger-ready" >
   <ul id ="orderq"> 
-  <li><img src= "./assets/images/vegan.png" >Hello</img></li>
+  
   </ul>
 
   </div>
   <div class="burger-eaten id="devourq">
   </div>
-   
-</form>
 <script>
+var oburger  = "";
   $( document ).ready(function() {
     
     $( "#burger-form" ).submit(function( event )
      {
 			  event.preventDefault();
-			  alert("clicked");
+			  if ($("#orderq").children().length==4){
+			    alert("Please devour a few burgers before ordering more. Enjoy!");
+			    return;
+			  }
+
 			  console.log(event.data);
 			  console.log("event " , event);
 			  console.log($(".nameofb").val());
@@ -49,25 +55,45 @@
 			  switch (oburger) {
 
 			  case "Cheesy Burger" :
-                 oburgersrc = "../public/assets/images/cheesy.png";
+                 oburgersrc = "../assets/images/cheesy.png";
+                 break;
 			  case "Beany Burger" :
-			     oburgersrc = "../public/assets/images/beany.png";
+			     oburgersrc = "../assets/images/beany.png";
+			     break;
 			  case "Leafy Burger" :
-			     oburgersrc = "../public/assets/images/leafy.png";
+			     oburgersrc = "../assets/images/leafy.png";
+			     break;
 			  case "Vegan Burger" :
-			     oburgersrc = "../public/assets/images/vegan.png";
+			     oburgersrc = "../assets/images/vegan.png";
+			     break;
 
 			  }
 
 			  console.log(oburgersrc);
 
-			  orderline = "<li><img src="
+			  orderline =  "<img src="
 			              + '"' + oburgersrc 
-			              + '" >' + "</img></li>";
-			 <!-- $("#orderq").append(orderline); -->
-			 console.log(orderline);
+			              + '" '
+			              +  ' class="theburger">'
+			              + "</img> "
+			             
+			  devourbtn = "<button type="
+			  + '"submit" > '
+			  + "<img class="
+			  + '"devc" id="devb"'
+			  + "src= "
+			  + '"../assets/images/devour.png"'
+			  + ' width ="40" height="40" /> </button>';
+			  ahtml = '<li class="bli">'
+			        + orderline + devourbtn
+			        +   "</li>";
+			  $("#orderq").append(ahtml);
+			  
+			 console.log(ahtml);
 
 
 	});
+
+
 });
 </script>
