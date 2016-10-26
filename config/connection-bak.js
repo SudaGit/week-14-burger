@@ -48,7 +48,7 @@ var source = {
 }
 
 // we use source.[name of connection] to hook into mysql
- var connection = mysql.createConnection( source.localhost || source.jawsDB );
+ var connection = mysql.createConnection(  source.jawsDB || source.localhost );
 //var connection = mysql.createConnection(source.localhost);
 
 
