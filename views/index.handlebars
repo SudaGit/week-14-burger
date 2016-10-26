@@ -23,29 +23,36 @@
 					    <button type="submit" class="burger-button" id="give-burger">Add Burger</button>
 			    </div>
 		  </div>
-   
-</form>
-</div>
-  <div class="burger-ready" >
-  <ul id ="orderq"> 
+   </div>
   
-  </ul>
+</form>
 
-  </div>
-  <div class="burger-eaten id="devourq">
-  </div>
+<div class = "btray"
+	<div>
+		<ul id ="orderq"> 
+
+		</ul>
+	</div>
+	<div>
+		<ul id ="devourq"> 
+
+		</ul>
+	</div>
+</div>
+
 <script>
 var oburger  = "";
   $( document ).ready(function() {
+    var orderno = 0;
     
     $( "#burger-form" ).submit(function( event )
      {
 			  event.preventDefault();
-			  if ($("#orderq").children().length==4){
-			    alert("Please devour a few burgers before ordering more. Enjoy!");
+			  if ($("#orderq").children().length==1){
+			    alert("Your tray is full. Please devour your burger before ordering more. Enjoy!");
 			    return;
 			  }
-
+               orderno++;
 			  console.log(event.data);
 			  console.log("event " , event);
 			  console.log($(".nameofb").val());
@@ -77,22 +84,39 @@ var oburger  = "";
 			              +  ' class="theburger">'
 			              + "</img> "
 			             
-			  devourbtn = "<button type="
-			  + '"submit" > '
-			  + "<img class="
-			  + '"devc" id="devb"'
+			  devourbtn = "<button "
+			  + ' class="devc" id="devb" '
+			  +  ' value= ' 
+			  + orderno 
+			  + ' >'
+			  + "<img "
 			  + "src= "
 			  + '"../assets/images/devour.png"'
-			  + ' width ="40" height="40" /> </button>';
-			  ahtml = '<li class="bli">'
-			        + orderline + devourbtn
-			        +   "</li>";
-			  $("#orderq").append(ahtml);
-			  
-			 console.log(ahtml);
+			  + ' width ="60" height="60" /> </button>';
+			  ahtml = '<li class="bli"'
+			          + '>'
+			          + orderline + devourbtn
+			          +   "</li>";
+			   bhtml = '<li class="bli"'
+			          + '>'
+			          + orderline
+			          +   "</li>";
+			   $("#orderq").append(ahtml);
+			 		  
+			 console.log(bhtml);
 
+     
+        $(".bli #devb").on("click", function(e)
+		{
+	      $("#orderq .bli").remove();
+	      $("#devourq").append(bhtml);
+	      console.log(e);
+	     
+		});
+        
 
 	});
+
 
 
 });

@@ -18,11 +18,17 @@ min-width:100px;
 
 .create-update-form {
   background: aqua;
-   margin: 55px;
-  padding: 10px;
-  height: 400px;
+   margin: 10px;
+   height: 400px;
 
 }
+
+/*#devb {
+  width:60px;
+  height:40px;
+background: url("../images/devour.png") no-repeat;
+}*/
+
 
 .form-group {
 	position:relative;
@@ -70,27 +76,51 @@ div.bmenu {
  width:275px;
  height:390px;
        }
-div.burger-ready{
+
+    
+/*div.burger-ready{
   display: block;
   position: relative;
   float:left;
-  width:400px;
- height:400px;
-}
+   }
+div.burger-eaten{
+  display: block;
+  position: relative;
+  float:left;
+   }*/
 
 .theburger{
 width:100px;
  height:100px;
  float:left;
 }
+
 .bli{
 width:250px;
  height:100px;
 }
-/*#orderq{
-  width:200px;
+
+.lli{
+width:100px;
  height:100px;
-}*/
+}
+
+.btray {
+  background: #5D6D7E;
+  height: 350px;
+  width:800;
+
+}   
+#orderq{
+  width:300px;
+ height:150px;
+ float:left;
+}
+#devourq{
+  width:300px;
+ height:150px;
+ float:left;
+}
 .burger-button {
 	min-width:100px;
 	max-width:200px;
